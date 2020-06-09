@@ -20,7 +20,7 @@ export const setTryAutologin = () => {
 
 export const signUp = (email, password) => {
     return (async dispatch => {
-        const res = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB1hW_xS2qA5dSxECwIXAIVwOmA2X4javA',
+        const res = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=xxxx',
             {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ email: email, password: password, returnSecureToken: true})});
 
         const resData = await res.json();
@@ -38,7 +38,7 @@ export const signUp = (email, password) => {
 
 export const logIn = (email, password) => {
     return (async dispatch => {
-        const res = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB1hW_xS2qA5dSxECwIXAIVwOmA2X4javA',
+        const res = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=xxxx',
             {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ email: email, password: password, returnSecureToken: true})});
 
         const resData = await res.json();
